@@ -241,7 +241,7 @@ console.log(data.conversion_rates[`${toCurrency}`])
     convertedAmountElement.value = 'Conversion rate unavailable';
     return;
   }
-  const convertedAmount: string = Math.round(amount * conversionRate).toString();
+  const convertedAmount: string = (amount * conversionRate).toFixed(2).toString();
   convertedAmountElement.value = convertedAmount;
    if (amount < 0 || amount > 0) {
      resultElement.textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`
@@ -257,6 +257,6 @@ console.log(data.conversion_rates[`${toCurrency}`])
 
 fromAmountElement.addEventListener('input', getExchangeRate)
 fromCurrencyElement.addEventListener('change', getExchangeRate)
-fromAmountElement.addEventListener('input', getExchangeRate)
+toCurrencyElement.addEventListener('change', getExchangeRate)
 window.addEventListener('load', getExchangeRate)
 

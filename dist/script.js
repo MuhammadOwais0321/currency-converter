@@ -210,7 +210,7 @@ const getExchangeRate = async () => {
             convertedAmountElement.value = 'Conversion rate unavailable';
             return;
         }
-        const convertedAmount = Math.round(amount * conversionRate).toString();
+        const convertedAmount = (amount * conversionRate).toFixed(2).toString();
         convertedAmountElement.value = convertedAmount;
         if (amount < 0 || amount > 0) {
             resultElement.textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
@@ -225,6 +225,6 @@ const getExchangeRate = async () => {
 };
 fromAmountElement.addEventListener('input', getExchangeRate);
 fromCurrencyElement.addEventListener('change', getExchangeRate);
-fromAmountElement.addEventListener('input', getExchangeRate);
+toCurrencyElement.addEventListener('change', getExchangeRate);
 window.addEventListener('load', getExchangeRate);
 //# sourceMappingURL=script.js.map
