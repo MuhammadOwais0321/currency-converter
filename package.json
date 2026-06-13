@@ -1,0 +1,17 @@
+{
+  "name": "-y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1-security.1"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

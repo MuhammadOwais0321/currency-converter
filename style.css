@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Finger Paint", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1d4444;
+}
+.converter-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 24px 30px;
+  text-align: center;
+}
+
+.converter-container h1 {
+  font-size: 28px;
+  text-decoration: underline;
+  color: #202124;
+  margin-bottom: 40px;
+}
+
+.converter-container .input-container {
+  border: 2px solid #bbbbbd;
+  border-radius: 4px;
+  margin-block: 20px;
+}
+.converter-container .input-container:focus-within {
+  border-color: #0056b3;
+}
+.converter-container .input-container input,
+.converter-container .input-container select {
+  width: 150px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.converter-container .arrow {
+  transform: rotate(90deg);
+  font-size: 44px;
+}
+
+.converter-container .result {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 440px) {
+  .converter-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .converter-container h1 {
+    font-size: 22px;
+  }
+  .converter-container .input-container {
+    border: none;
+  }
+  .converter-container .input-container :is(input, select) {
+    border: 1px solid #ccc;
+    margin-block: 4px;
+    width: 100%;
+  }
+}
